@@ -6,15 +6,17 @@
   <title>Login Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-200 flex items-center justify-center h-screen">
-  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-sm text-center">
+<body class="bg-gray-200 flex h-screen">
+
+  <!-- Left Section (Form and Logo) -->
+  <div class="bg-white p-8 rounded-lg shadow-md w-full md:w-1/2 flex flex-col items-center justify-center">
     <!-- Logo -->
-    <div class="mb-6">
-      <img src="https://logos-world.net/wp-content/uploads/2024/01/Temu-Logo.png" alt="Logo" class="mx-auto mb-3">
+    <div class="mb-6 text-center">
+      <img src="https://logos-world.net/wp-content/uploads/2024/01/Temu-Logo.png" alt="Logo" class="mx-auto mb-3 w-20">
       <h1 class="text-2xl font-bold text-gray-700">Counseal Clone</h1>
     </div>
     <!-- Form -->
-    <form>
+    <form class="w-full max-w-sm">
       <div class="mb-4">
         <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
@@ -24,14 +26,24 @@
       <div class="flex items-center justify-between text-sm text-gray-500 mb-6">
         <label class="flex items-center">
           <input type="checkbox" class="mr-2">
-          !Remember Me!
+          Remember Me!
         </label>
-        <a href="#" class="text-blue-500 hover:underline">( Having Trouble Bro? )</a>
+        <a href="#" class="text-blue-500 hover:underline">Having Trouble Bro?</a>
       </div>
       <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 focus:outline-none">
         Login
       </button>
     </form>
+    <!-- Install App Button (Visible only on smaller screens) -->
+    <button class="mt-4 bg-blue-500 text-white py-2 px-6 rounded-lg md:hidden">
+      Install App!
+    </button>
   </div>
+
+  <!-- Right Section (Background Image) -->
+  <div class="hidden md:block h-screen w-1/2 bg-cover bg-center" style="background-image: url('https://img.freepik.com/premium-photo/html5-editor-website-development-website-html-code-laptop-display-closeup-photo_372999-2148.jpg?w=1480');">
+    <!-- This section will only show on larger screens and acts as a visual background -->
+  </div>
+
 </body>
 </html>
